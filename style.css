@@ -1,0 +1,15 @@
+body { background-color: lightblue; }
+h1 { color: crimson; font-family: 'Arial', sans-serif; }
+p { font-size: 18px; line-height: 1.6; }
+button { background-color: gold; border: none; padding: 10px; }
+
+.gul-cirkel {
+  width: 100px;
+  height: 100px;
+  background-color: yellow;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 20px;
+  right: 20px; /* Ändra till left: 20px; för vänster hörn */
+  z-index: 999;
+}

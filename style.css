@@ -1,15 +1,112 @@
-body { background-color: lightblue; }
-h1 { color: crimson; font-family: 'Arial', sans-serif; }
-p { font-size: 18px; line-height: 1.6; }
-button { background-color: gold; border: none; padding: 10px; }
-
-.gul-cirkel {
-  width: 100px;
-  height: 100px;
-  background-color: yellow;
-  border-radius: 50%;
-  position: fixed;
-  bottom: 20px;
-  right: 20px; /* Ändra till left: 20px; för vänster hörn */
-  z-index: 999;
+/* --------RESET / BAS ------- */ 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
+body {
+  font-family: Arial, sans-serif;
+  padding: 1rem;
+  background: #fff;
+  color: #1111118f;
+  word-wrap: break-word;
+  hyphens: auto;
+}
+
+/* ----- HUVUDLAYOUT (mobil först/ flex-kolumn) ----- */ 
+main {
+display: flex;
+flex-direction: column;
+gap: 2rem; /* luft mellan artiklar */
+margin-bottom: 0;
+}
+
+/* ---- ARTIKLAR ---- */
+article {
+  border-bottom: 1xp solid #248a43;
+  padding-bottom: 1rem;
+}
+
+article:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+/* --- RUBRIKER --- */
+h1 {
+  font-size: 2rem;
+  color: rgb(179, 9, 9);
+  font-family: sans-serif;
+  font-style: normal;
+  text-transform: uppercase; /* versaler för enhetlig stil */
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+
+}
+
+/* ---- TEXT, LÄNKAR & BLOCKQOUTE --- */
+p {
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+a {
+  color: black;
+  text-decoration: underline;
+}
+
+a:hoover {
+text-decoration: underline;
+}
+
+blockquote {
+margin-left: 1rem;
+padding-left: 1rem;
+border-left: 4px solid #ea6868;
+font-style: italic;
+margin-bottom: 1rem;
+}
+
+/* ---- KNAPPAR --- */
+button {
+  padding: 0.5rem 1rem;
+  background-color: #b09696;
+  border: none;
+  cursor: default;
+  margin-top: 1rem;
+  font-family: sans-serif;
+  font-size: 1rem;
+  border-radius: 0.25rem;
+}
+
+/* ---- BILDER ---- */
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.5rem;}
+
+  /* ---- NAV & LISTOR ---- */
+  ul {
+
+  }
+
+  footer {
+
+  }
+
+  /* TIPSA REDAKTIONEN */
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1rem;
+    border: 1px solid #ddd;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    background-color: #f9f9f9;
+  }
+  /* --- RESPONSIVITET (DESKTOP -> Växla till grid-huvudlayput --- */

@@ -95,43 +95,35 @@
             <hr>
         </section>
 
-        <aside>
-            <section aria-labelledby="tipsa-redaktionen">
-                <h2 id="tipsa-redaktionen">Tipsa redaktionen</h2>
-                <form action="#" method="post" class="contact-form">
-                    <label>
-                        <span>Ditt namn</span>
-                        <input type="text" placeholder="För- och efternamn">
-                    </label>
+        <!-- SIDOPANEL - TIPSA REDAKTIONEN -->
+        <section aria-labelledby="tipsa-redaktionen">
+            <h2 id="tipsa-redaktionen">Tipsa redaktionen</h2>
+            <form action="#" method="post" class="contact-form">
+                <label for="namn">Ditt namn</label>
+                <input type="text" id="namn" name="namn" placeholder="För- och efternamn" required>
 
-                    <label>
-                        <span>Din e-post</span>
-                        <input type="email" placeholder="me@example.com">
-                    </label>
+                <label for="epost">Din e-post</label>
+                <input type="email" id="epost" name="epost" placeholder="me@example.com" required>
 
-                    <label>
-                        <span>Ditt telefonnummer</span>
-                        <input type="tel" placeholder="+46701234567">
-                    </label>
+                <label for="telefon">Ditt telefonnummer</label>
+                <input type="tel" id="telefon" name="telefon" placeholder="+46701234567" required>
 
-                    <label>
-                        <span>Välj ämne</span>
-                        <select required>
-                            <option value="">-- Välj ämne --</option>
-                            <option value="nyhet">Nyhetstips</option>
-                            <option value="evenemang">Evenemang</option>
-                            <option value="övrigt">Övrigt</option>
-                        </select>
-                    </label>
+                <label for="amne">Välj ämne</label>
+                <select id="amne" name="amne" required>
+                    <option value="">--- Välj ämne ---</option>
+                    <option value="nyhet">Nyhetstips</option>
+                    <option value="evenemang">Evenemang</option>
+                    <option value="ovrigt">Övrigt</option>
+                </select>
 
-                    <label>
-                        <span>Meddelande</span>
-                        <textarea rows="4" placeholder="Skriv ditt meddelande här..." required></textarea>
-                    </label>
+                <label for="meddelande">Meddelande</label>
+                <textarea id="meddelande" name="meddelande" rows="4" placeholder="Skriv ditt meddelande här..."
+                    required></textarea>
 
-                    <label class="checkbox">
-                        <input type="checkbox" required>
-                        <span>Jag godkänner att ni kontaktar mig</span>
+                <div class="form-actions">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="kontakt" name="contact-consent">
+                        Kontakta mig
                     </label>
 
                     <button type="submit" class="btn">Skicka</button>

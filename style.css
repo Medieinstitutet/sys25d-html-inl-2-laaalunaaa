@@ -77,6 +77,23 @@ article img {
   color: #e48578;
   margin-bottom: 1rem;
 }
+
+/* --- RESPONSIVITET --- */
+@media (max-width: 768px) {
+  .main-layout {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .menu-container, .search-box, .articles, .tipsa-redaktionen {
+    grid-column: auto;
+    max-width: 100%;
+    margin: 0 0 1rem 0;
+  }
+  .articles {
+    display: flex;
+    flex-direction: column;
+  }
   .tipsa-redaktionen {
     margin-top: 0;
   }

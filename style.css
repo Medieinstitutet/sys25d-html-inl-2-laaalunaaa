@@ -12,6 +12,26 @@ body {
   color: #1111118f;
   word-wrap: break-word;
   hyphens: auto;
+.search-box {
+  grid-column: 3;
+  align-self: start;
+  display: flex;
+  gap: 0.5rem;
+}
+.tipsa-redaktionen {
+  grid-area: tipsa;
+  max-width: 300px;
+  width: 100%;
+  justify-self: start;
+  display: flex;
+  flex-direction: column;
+  font-size: 1rem;
+  color: #e48578;
+  margin-bottom: 1rem;
+}
+  .tipsa-redaktionen {
+    margin-top: 0;
+  }
 }
 
 /* ----- HUVUDLAYOUT (mobil först/ flex-kolumn) ----- */ 
@@ -20,6 +40,11 @@ display: flex;
 flex-direction: column;
 gap: 2rem; /* luft mellan artiklar */
 margin-bottom: 0;
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
 }
 
 /* ---- ARTIKLAR ---- */
@@ -45,6 +70,43 @@ h1 {
 
 h2 {
   font-size: 1.5rem;
+
+.header-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 2rem 1rem 2rem;
+  gap: 2rem;
+  border-bottom: 5px solid #e48578;
+  padding: 1rem;
+  background-color: #ffe2e9;
+  border-radius: 0.5rem;
+
+}
+
+/*=========Sökbox======================*/
+.search-box {
+  display: flex;
+}
+
+.search-box input[type='search'] {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border-radius: 1rem 0 0 1rem;
+  border: 1px solid #bbb;
+  height: 38px;
+  width: 10rem;
+}
+
+.search-box button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border: 1px solid #bbb;
+  background: #facccc;
+  color: #574f4f;
+  cursor: pointer;
+  border-radius: 0 1rem 1rem 0;
+}
 
 }
 
@@ -96,12 +158,23 @@ img {
 
   footer {
 
+  .search-box {
+    width: 100%;
   }
 
   /* TIPSA REDAKTIONEN */
   .contact-form {
     display: flex;
+  .search-box input[type='search'] {
+    width: 100%;
+  }
+
+  .header-controls {
     flex-direction: column;
+    /* sprid ut mellan meny och sök */
+    gap: 1rem;
+  }
+
     gap: 1rem;
     margin-top: 1rem;
     border: 1px solid #ddd;

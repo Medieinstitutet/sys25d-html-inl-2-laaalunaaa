@@ -65,6 +65,7 @@ article img {
   flex-shrink: 0;
 }
 
+/* --- SIDOPANEL UNDER ARTIKLAR --- */
 .tipsa-redaktionen {
   grid-area: tipsa;
   max-width: 300px;
@@ -350,6 +351,23 @@ footer a:focus {
 .contact-form textarea {
   resize: vertical;
   min-height: 100px;
+}
+
+/* Formulärknapp */
+.contact-form .button {
+  display: flex;
+  background: #facccc;
+  cursor: pointer;
+}
+
+/* Inaktiv knapp */
+.submit-button {
+  background: #ddd8;
+  color: #111;
+  border: none;
+  border-radius: 0.3rem;
+  padding: 0.6rem;
+  cursor: not-allowed;
 }
 
 /* ---- BILDER ---- */

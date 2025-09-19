@@ -5,13 +5,21 @@
   box-sizing: border-box;
 }
 
+/* ---- BODY - grundinställningar ---- */
+/* Huvudstil för body*/
 body {
   font-family: Arial, sans-serif;
+  line-height: 1.5;
+  margin: 0;
   padding: 1rem;
   background: #fff;
-  color: #1111118f;
+  color: #111111;
   word-wrap: break-word;
   hyphens: auto;
+  box-sizing: border-box;
+}
+
+/* --- HUVUDLAYOUT MED GRID --- */
 .main-container {
   display: grid;
   grid-template-columns: 1fr;
@@ -109,6 +117,13 @@ article:last-child {
   border-bottom: none;
 }
 
+
+/* Typografi */
+.header-box h1 {
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: #e48578;
+  margin-bottom: 0.5rem;
 }
 
 h2 {
@@ -116,6 +131,25 @@ h2 {
 /*Knappar "Läs mer" får pekare om de inte är disabled*/
 article button:not(:disabled) {
   cursor: pointer;
+}
+
+/* Header-sektion */
+.header-box {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin: 2rem;
+  padding: 2rem;
+  flex-wrap: wrap;
+  background-color: #ffe2e9;
+}
+
+.header-box img {
+  width: 30%;
+  height: auto;
+  border-radius: 5rem;
+  object-fit: cover;
+  flex-shrink: 0;
 }
 
 .header-controls {
@@ -335,7 +369,15 @@ img {
     margin: 0;
   }
 
+  .header-box {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
 
+  .header-box img {
+    height: auto;
+    display: block;
   }
 
   footer {

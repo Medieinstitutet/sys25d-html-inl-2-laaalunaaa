@@ -324,11 +324,11 @@ a:focus {
 }
 
 blockquote {
-margin-left: 1rem;
-padding-left: 1rem;
-border-left: 4px solid #ea6868;
-font-style: italic;
-margin-bottom: 1rem;
+  margin-left: 1rem;
+  padding-left: 1rem;
+  border-left: 4px solid #ea6868;
+  font-style: italic;
+  margin-bottom: 1rem;
 }
 
 /* --- FOOTER --- */
@@ -430,6 +430,12 @@ footer a:focus {
   padding: 0.6rem;
   cursor: not-allowed;
 }
+
+summary {
+  display: list-items;
+  color: #333
+}
+
 
 /* ---- BILDER ---- */
 img,

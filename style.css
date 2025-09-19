@@ -97,6 +97,26 @@ article img {
   .tipsa-redaktionen {
     margin-top: 0;
   }
+ 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  border: 0;
+}
+
+ .full-width-image-container {
+    width: 100%;
+    margin: 0;
+    left: 0;
+    right: 0;
+  }
+}
+
 /* layout -Huvuddcontainer grid */
 .main-container {
   display: grid;

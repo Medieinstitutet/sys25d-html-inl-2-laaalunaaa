@@ -164,8 +164,25 @@ article:last-child {
   margin-bottom: 0.5rem;
 }
 
-h2 {
   font-size: 1.5rem;
+  color: #e48578;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+h4 {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+/* Text i artikeln */
+article p {
+  margin: 0;
+  color: #333;
+  font-size: 1rem;
+}
+
 /*Knappar "Läs mer" får pekare om de inte är disabled*/
 article button:not(:disabled) {
   cursor: pointer;

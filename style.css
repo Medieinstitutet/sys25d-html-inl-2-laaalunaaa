@@ -12,12 +12,51 @@ body {
   color: #1111118f;
   word-wrap: break-word;
   hyphens: auto;
+.main-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto;
+  grid-template-areas:
+    "articles articles"
+    "tipsa tipsa";
+  gap: 2rem;
+  padding: 1rem;
+  max-width: 100%;
+  margin: 0;
+}
+
 .search-box {
   grid-column: 3;
   align-self: start;
   display: flex;
   gap: 0.5rem;
 }
+
+/* --- ARTIKLAR I MITTEN --- */
+.articles {
+  grid-area: articles;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  border-bottom: 1px solid #d62c2c;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+article img {
+  width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  flex-shrink: 0;
+}
+
 .tipsa-redaktionen {
   grid-area: tipsa;
   max-width: 300px;
@@ -32,14 +71,17 @@ body {
   .tipsa-redaktionen {
     margin-top: 0;
   }
+/* layout -Huvuddcontainer grid */
+.main-container {
+  display: grid;
+  grid-template-areas:
+    "articles"
+    "tipsa";
+  gap: 1rem;
+  max-width: 100%;
+  margin: 0 auto;
 }
 
-/* ----- HUVUDLAYOUT (mobil först/ flex-kolumn) ----- */ 
-main {
-display: flex;
-flex-direction: column;
-gap: 2rem; /* luft mellan artiklar */
-margin-bottom: 0;
 .checkbox-label {
   display: flex;
   align-items: center;
@@ -48,28 +90,33 @@ margin-bottom: 0;
 }
 
 /* ---- ARTIKLAR ---- */
+/* Container för artikel-listan*/
+.articles {
+  grid-area: articles;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Varje artikel*/
 article {
-  border-bottom: 1xp solid #248a43;
   padding-bottom: 1rem;
+  border-bottom: 1px solid #d62c2c;
 }
 
+/*Specifik stil för första artikeln*/
 article:last-child {
-  border-bottom: 0;
-  padding-bottom: 0;
+  border-bottom: none;
 }
 
-/* --- RUBRIKER --- */
-h1 {
-  font-size: 2rem;
-  color: rgb(179, 9, 9);
-  font-family: sans-serif;
-  font-style: normal;
-  text-transform: uppercase; /* versaler för enhetlig stil */
-  margin-bottom: 1rem;
 }
 
 h2 {
   font-size: 1.5rem;
+/*Knappar "Läs mer" får pekare om de inte är disabled*/
+article button:not(:disabled) {
+  cursor: pointer;
+}
 
 .header-controls {
   display: flex;
@@ -170,12 +217,14 @@ p {
 }
 
 a {
-  color: black;
-  text-decoration: underline;
+  color: #ea6868;
+  text-decoration: none;
 }
 
-a:hoover {
-text-decoration: underline;
+a:hover,
+a:focus {
+  text-decoration: none;
+  outline: none;
 }
 
 blockquote {
@@ -186,12 +235,6 @@ font-style: italic;
 margin-bottom: 1rem;
 }
 
-/* ---- KNAPPAR --- */
-button {
-  padding: 0.5rem 1rem;
-  background-color: #b09696;
-  border: none;
-  cursor: default;
 /* --- FOOTER --- */
 footer {
   display: flex;
@@ -218,10 +261,61 @@ footer a:focus {
   outline: none;
 }
 
+/* TIPSA REDAKTIONEN */
+.tipsa-redaktionen {
+  grid-area: tipsa;
+  max-width: 300px;
+  width: 100%;
+  margin: 0 auto;
+  background: #f9f9f9;
+  padding: 0.5rem;
+  border-radius: 1rem;
+  color: #e48578;
+}
+
+.tipsa-redaktionen h2 {
+  margin-bottom: 0.5rem;
+  text-align: center;
+  color: #e48578;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
   margin-top: 1rem;
-  font-family: sans-serif;
+  border: 1px solid #e48578;
+  padding: 1rem;
+  border-radius: 1rem;
+  background-color: #f9f9f9;
+  align-items: flex-start;
+}
+
+/* Formulärets fält*/
+.contact-form label {
+  display: flex;
+  flex-direction: column;
+  font-size: 1em;
+  color: #333;
+  width: 100%;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.3rem;
   font-size: 1rem;
-  border-radius: 0.25rem;
+  border: 1px solid #bbb;
+  border-radius: 0.9rem;
+  margin-top: 0.5rem;
+}
+
+/* Textarea */
+.contact-form textarea {
+  resize: vertical;
+  min-height: 100px;
 }
 
 /* ---- BILDER ---- */
@@ -230,8 +324,17 @@ img {
   height: auto;
   border-radius: 0.5rem;}
 
-  /* ---- NAV & LISTOR ---- */
-  ul {
+/* --- RESPONSIVITET --- */
+/* Mindre skärmar */
+@media (max-width: 600px) {
+  .main-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    gap: 1rem;
+    margin: 0;
+  }
+
 
   }
 
@@ -244,9 +347,6 @@ img {
     width: 100%;
   }
 
-  /* TIPSA REDAKTIONEN */
-  .contact-form {
-    display: flex;
   .search-box input[type='search'] {
     width: 100%;
   }
@@ -257,6 +357,11 @@ img {
     gap: 1rem;
   }
 
+  .tipsa-redaktionen {
+    max-width: 100%;
+    margin: 0;
+  }
+
   .menu-list {
     position: static;
     box-shadow: none;
@@ -264,12 +369,29 @@ img {
     padding: 0;
   }
 }
+
+/* Desktop: show menu as horizontal, hide toggle */
+@media (min-width: 768px) {
+  .main-container {
+    display: grid;
+    grid-template-areas:
+      "articles"
+      "tipsa";
     gap: 1rem;
-    margin-top: 1rem;
-    border: 1px solid #ddd;
-    padding: 1rem;
-    border-radius: 0.5rem;
-    background-color: #f9f9f9;
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: 0 1rem;
+  }
+
+  .articles {
+    grid-area: articles;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    width: 100;
+  }
+
   .menu-label {
     display: none;
   }

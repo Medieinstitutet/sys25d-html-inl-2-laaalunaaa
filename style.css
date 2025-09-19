@@ -388,10 +388,15 @@ footer a:focus {
 }
 
 /* ---- BILDER ---- */
-img {
+img,
+article img {
   max-width: 100%;
   height: auto;
-  border-radius: 0.5rem;}
+  border-radius: 0.5rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+
 
 /* --- RESPONSIVITET --- */
 /* Mindre skärmar */

@@ -493,6 +493,21 @@ article img {
     list-style: none;
   }
 }
+
+/* === ÖVRIGT=== */
+/* Visual separator */
+.header-separator {
+  margin: 0 2rem 1rem;
+  border: none;
+  border-bottom: 1px solid #e48578;
+  width: calc(100% - 4rem);
+}
+
+/* Details (expandera info) */
+details {
+  display: block;
+}
+
 .menu-toggle {
   display: none;
 }

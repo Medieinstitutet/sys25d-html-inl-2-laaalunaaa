@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="utf-8">
+    <title>Tidningsnamn</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header class="header">
+    <div class="header-box">
+      <img src="images/blomma3.jpg" alt="Logotyp" class="full-width-img" width="200" height="200" loading="lazy">
+      <h1>Ernsts värld där varje tanke får blomma</h1>
+      <blockquote class="start-citat">
+        <p>Samlade tankar och relfektioner om Ernst olika filosofier</p>
+      </blockquote>
+    </div>
+
+    <div class="header-controls">
+      <form role="search" action="#" method="get" class="search-box">
+        <label for="search-input">Sök</label>
+        <input type="search" id="search-input" name="q" placeholder="Sök...">
+        <button type="submit">🔍</button>
+      </form>
+
+      <!-- Hamburgemney-->
+      <input type="checkbox" id="menu-toggle" class="menu-toggle">
+      <label for="menu-toggle" class="menu-icon-label">Meny ☰</label>
+
+      <!-- Rad 3: Meny och sökfält -->
+      <nav class="menu-container" aria-label="Huvudmeny">
+        <ul class="menu-list">
+          <li><a href="#" target="_blank" rel="noopener noreferrer">Hem</a></li>
+          <li>
+            <a href="#" target="_blank" rel="noopener noreferrer">Senaste nytt</a>
+          </li>
+          <li>
+            <a href="#" target="_blank" rel="noopener noreferrer">Arkiv</a>
+          </li>
+          <li>
+            <a href="#" target="_blank" rel="noopener noreferrer">Kontakta oss</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="header-seperator"></div>
+  </header>
+
+  <!-- HUVUDINNEHÅLL -->
+  <main class="main-container">
+
+    <div class="articles">
+      <article>
+        <h2> Ernsts naturfilosofi</h2>
+        <img src="images/Ernst1.jpg" alt="blomma1.jpg" width="1024" height="768" loading="lazy">
+        <p>Text av: Annika Rosendal</p>
+        <p>
+          För Ernst är naturen inte bara en plats – den är ett tillstånd. En plats där tankar får blomma och där
+          stillheten talar. “I det enkla bor det vackra,” säger han, och det är just i det enkla – en libbsticka, en
+          solvarm sten, en tyst skogsstig – som Ernst hittar sin ro. Att gå barfota i daggigt gräs är inte bara en
+          handling, det är en ritual.
+        </p>
+        <blockquote>
+          <p>
+            “Jag har mött libbstickor som tittat mig i ögonen.” - Ernst
+          </p>
+        </blockquote>
+        <a href="#">Läs mer</a>
+      </article>
+
+      <!-- ANDRA ARTIKELN -->
+      <article>
+        <h2>Ernsts inredningsfilosof</h2>
+        <img src="images/Ernst2.jpg" alt="blomma2.jpg" width="1024" height="768" loading="lazy">
+        <p>Text av: Erik Grenlund</p>
+        <p>
+          Inredning är för Ernst inte en fråga om stil – det är en fråga om själ. “Här sitter jag och känner in rummet,”
+          säger han, och det är just det som gör hans filosofi så unik. Ett rum ska inte bara vara funktionellt, det ska
+          vara levande. En sovande katt, ett handgjort fat, ett ljus som flämtar – det är detaljerna som skapar
+          helheten.
+        </p>
+        <blockquote>
+          <p>“När en katt ligger och sover i ett rum finns det inte mycket mer för en inredare att göra där.” - Ernst
+          </p>
+        </blockquote>
+        <a href="#">Läs mer</a>
+      </article>
+
+      <!-- TREDJE ARTIKELN -->
+      <article>
+        <h2>Ernst om livet</h2>
+        <img src="images/Ernst3.jpg" alt="blomma3.jpg" width="1024" height="768" loading="lazy">
+        <p>Text av: Saga Sandström</p>
+        <p>
+          Ernsts syn på livet är lika oväntad som den
+          är befriande. Han vågar vara förvirrad, mjuk, filosofisk och
+          ibland helt ologisk. “Jag är här för att skaffa mig en mental flytväst,” säger han, och det är just den typen
+          av självdistans som gör honom så mänsklig. Livet är inte en rak väg, det är en stig som slingrar sig genom
+          både skratt och stillhet.
+        </p>
+        <blockquote>
+          <p>“Varför gå den logiska vägen när det finns så många andra vägar?” - Ernst</p>
+        </blockquote>
+        <a href="#">Läs mer</a>
+      </article>
+    </div>
+
+    <!-- SIDOPANEL - TIPSA REDAKTIONEN -->
+    <aside class="tipsa-redaktionen">
+      <form action="#" method="post" class="contact-form">
+        <h2>Tipsa redaktionen</h2>
+        <label>
+          <span>Ditt namn</span>
+          <input type="text" id="namn" name="namn" placeholder="För- och efternamn" required>
+        </label>
+
+        <label>
+          <span>Din e-post</span>
+          <input type="email" id="epost" name="epost" placeholder="me@example.com" required>
+        </label>
+
+        <label>
+          <span>Ditt telefonnummer</span>
+          <input type="tel" id="telefon" name="telefon" placeholder="+46701234567" required>
+        </label>
+
+        <label for="amne">Välj ämne</label>
+        <select id="amne" name="amne" required>
+          <option value="">--- Välj ämne ---</option>
+          <option value="nature">Naturfilosofi</option>
+          <option value="interior">Inredningsfilosofi</option>
+          <option value="life">Livsfilosofi</option>
+          <option value="ovrigt">Övrigt</option>
+        </select>
+
+        <label>
+          <span>Meddelande</span>
+          <textarea id="meddelande" name="meddelande" rows="4" placeholder="Skriv ditt meddelande här..."
+            required></textarea>
+        </label>
+
+        <label class="checkbox-label" for="contact-consent">
+
+          <input type="checkbox" id="contact-consent" name="contact-consent">
+          Kontakta mig
+        </label>
+        <button type="submit" class="button">Skicka</button>
+
+        <details>
+          <summary>GDPR och villkor</summary>
+          <p>
+            Genom att skicka detta formulär godkänner jag att mina uppgifter
+            lagras enligt GDPR för att redaktionen ska kunna hantera mitt
+            ärende.
+          </p>
+        </details>
+      </form>
+    </aside>
+  </main>
+
+  <footer>
+    <div class="footer-left">
+      <p>Företagsnamn</p>
+      <p>Adress</p>
+      <p>Telefon</p>
+      <p>E-post</p>
+    </div>
+
+    <div class="footer-center">
+      <p>
+        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">Facebook</a>
+      </p>
+      <p>
+        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a>
+      </p>
+    </div>
+
+    <div class="footer-right">
+      <p><a href="#">Om oss</a></p>
+      <p><a href="#">Sitemap</a></p>
+    </div>
+  </footer>
+</body>
+
+</html>

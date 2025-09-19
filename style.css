@@ -192,6 +192,32 @@ button {
   background-color: #b09696;
   border: none;
   cursor: default;
+/* --- FOOTER --- */
+footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  background: #f9f9f9;
+  border-top: 1px solid #eee;
+}
+
+footer p {
+  margin: 1rem 0 0.5rem 0;
+  font-size: 1rem;
+  color: #333;
+}
+
+footer a {
+  color: #333;
+  text-decoration: none;
+}
+
+footer a:hover,
+footer a:focus {
+  text-decoration: underline;
+  outline: none;
+}
+
   margin-top: 1rem;
   font-family: sans-serif;
   font-size: 1rem;
@@ -210,6 +236,9 @@ img {
   }
 
   footer {
+    flex-direction: column;
+    padding: 1rem 0.5rem;
+  }
 
   .search-box {
     width: 100%;
